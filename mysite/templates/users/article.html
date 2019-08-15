@@ -1,0 +1,10 @@
+{% extends 'users/index.html' %}
+
+{% block content %}
+
+<h2>Courses Lists</h2>
+{% for article in article_list %}
+    <h3><a href="{% url 'detail' id=article.id %}">{{ article.title }}</a></h3>
+{% endfor %}
+
+{% endblock %}
